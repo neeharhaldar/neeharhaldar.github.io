@@ -11,6 +11,15 @@ body {
   line-height: 1.7;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* NAVBAR */
 header {
   position: sticky;
@@ -99,24 +108,6 @@ section {
   margin-left: auto;
 }
 
-/* BUTTONS */
-.buttons a {
-  display: inline-block;
-  margin-top: 1.5rem;
-  margin-right: 1rem;
-  padding: 0.6rem 1.5rem;
-  border-radius: 999px;
-  border: 1px solid #b45309;
-  color: #b45309;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.buttons a:hover {
-  background: #b45309;
-  color: white;
-}
-
 /* PROJECT GRID */
 .project-grid {
   display: grid;
@@ -160,17 +151,54 @@ footer {
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
   }
 
-  nav ul {
-    gap: 1.2rem;
+  .hero-image {
+    margin-left: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+
+  .socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+
+
+  .email-link span {
+    font-size: 0.8rem;        /* smaller email text */
+  }
+
+  .socials a {
+    font-size: 1.1rem;        /* slightly smaller icons */
   }
 }
-
 .socials {
   margin-top: 1.5rem;
   display: flex;
